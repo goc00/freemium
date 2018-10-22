@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D8C9790-328B-4FDB-B0FC-8EAE6103FF7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Contract</RootNamespace>
+    <AssemblyName>Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\DimensionsExceptions.cs" />
+    <Compile Include="Exceptions\DimensionsTypesExceptions.cs" />
+    <Compile Include="Exceptions\NotEnoughAttributesException.cs" />
+    <Compile Include="Exceptions\NotValidDataException.cs" />
+    <Compile Include="Exceptions\ProductsExceptions.cs" />
+    <Compile Include="Exceptions\ProfilesDimensionsExceptions.cs" />
+    <Compile Include="Exceptions\ProfilesExceptions.cs" />
+    <Compile Include="Exceptions\PromosExceptions.cs" />
+    <Compile Include="Exceptions\SubscriptionsExceptions.cs" />
+    <Compile Include="Exceptions\UsersDimensionsExceptions.cs" />
+    <Compile Include="Exceptions\UsersExceptions.cs" />
+    <Compile Include="Interfaces\IDimensionsService.cs" />
+    <Compile Include="Interfaces\ISubscriptionsService.cs" />
+    <Compile Include="Interfaces\IStatusService.cs" />
+    <Compile Include="Models\ActiveSubscriptionsData.cs" />
+    <Compile Include="Models\ActiveSubscriptionsParam.cs" />
+    <Compile Include="Models\BaseParam.cs" />
+    <Compile Include="Models\DimensionsParams.cs" />
+    <Compile Include="Models\Dto\DimensionType.cs" />
+    <Compile Include="Models\Dto\DimensionCategory.cs" />
+    <Compile Include="Models\Dto\DimensionData.cs" />
+    <Compile Include="Models\Dto\ProfileDimension.cs" />
+    <Compile Include="Models\Dto\Product.cs" />
+    <Compile Include="Models\Dto\SimpleDimension.cs" />
+    <Compile Include="Models\Dto\Dimension.cs" />
+    <Compile Include="Models\Dto\Profile.cs" />
+    <Compile Include="Models\Enum\DimensionTypeEnum.cs" />
+    <Compile Include="Models\Enum\CodeStatusEnum.cs" />
+    <Compile Include="Models\GetSubscriptionsByRenewalParams.cs" />
+    <Compile Include="Models\GoogleAnalyticsHelper.cs" />
+    <Compile Include="Models\IntegrationValues.cs" />
+    <Compile Include="Models\NaranyaNotification.cs" />
+    <Compile Include="Models\Profiles.cs" />
+    <Compile Include="Models\Request\GetProfilesByCountryRequest.cs" />
+    <Compile Include="Models\Request\ResetSubscriptionRequest.cs" />
+    <Compile Include="Models\Request\GetDataUserRequest.cs" />
+    <Compile Include="Models\Request\GetProfileDimensionsRequest.cs" />
+    <Compile Include="Models\Request\GetDimensionRequest.cs" />
+    <Compile Include="Models\Request\GetDimensionTypesByIdProductAndIdDTRequest.cs" />
+    <Compile Include="Models\Request\GetDimensionTypesByIdProductRequest.cs" />
+    <Compile Include="Models\Request\GetDimensionCategoriesByIdProductRequest.cs" />
+    <Compile Include="Models\Request\UpdateDimensionRequest.cs" />
+    <Compile Include="Models\Request\SetDimensionRequest.cs" />
+    <Compile Include="Models\Request\UpdateProfileRequest.cs" />
+    <Compile Include="Models\Request\UpdateDimensionCategoryRequest.cs" />
+    <Compile Include="Models\Request\SetDimensionCategoryRequest.cs" />
+    <Compile Include="Models\Request\SetDimensionTypeRequest.cs" />
+    <Compile Include="Models\Request\SetProfileRequest.cs" />
+    <Compile Include="Models\Request\SetProfileUserRequest.cs" />
+    <Compile Include="Models\Request\GetProfilesByProductRequest.cs" />
+    <Compile Include="Models\Request\SubscriptionRequest.cs" />
+    <Compile Include="Models\Request\UpdateValueDimensionRequest.cs" />
+    <Compile Include="Models\ResetSubscriptionParam.cs" />
+    <Compile Include="Models\Response\Common\ActionResponse.cs" />
+    <Compile Include="Models\Response\Common\DeleteResponse.cs" />
+    <Compile Include="Models\Response\Common\JsonResponseError.cs" />
+    <Compile Include="Models\Response\Common\JsonResponseErrorParams.cs" />
+    <Compile Include="Models\Response\Common\JsonResponseOk.cs" />
+    <Compile Include="Models\Response\Common\UpdateResponse.cs" />
+    <Compile Include="Models\Response\GetProfileDimensionListResponse.cs" />
+    <Compile Include="Models\Response\GetProductListResponse.cs" />
+    <Compile Include="Models\Response\GetDimensionTypeListResponse.cs" />
+    <Compile Include="Models\Response\GetDimensionCategoryListResponse.cs" />
+    <Compile Include="Models\Response\GetDimensionListResponse.cs" />
+    <Compile Include="Models\Response\GetDataUserResponse.cs" />
+    <Compile Include="Models\Response\GetDimensionCategoryResponse.cs" />
+    <Compile Include="Models\Response\GetDimensionResponse.cs" />
+    <Compile Include="Models\Response\GetProfilesByCountryResponse.cs" />
+    <Compile Include="Models\Response\GetProfilesByProductResponse.cs" />
+    <Compile Include="Models\Response\SetDimensionResponse.cs" />
+    <Compile Include="Models\Response\SetProfileUserResponse.cs" />
+    <Compile Include="Models\Response\ResetSubscriptionResponse.cs" />
+    <Compile Include="Models\Response\UpdateValueDimensionResponse.cs" />
+    <Compile Include="Models\RestResponse.cs" />
+    <Compile Include="Models\Subscriptions.cs" />
+    <Compile Include="Models\SubscriptionsResponse.cs" />
+    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\UsersDimensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NLog.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

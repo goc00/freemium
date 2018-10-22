@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+}
+
+<center>
+    <h1>Formulario de pago DEMO</h1>
+
+    <form method="post" action="@Url.Content("~/FormularioPago/Next")" class="form-horizontal">
+        <input type="hidden" name="form" value="@ViewBag.form" />
+        <input type="hidden" name="plan" value="@ViewBag.plan" />
+        <input type="hidden" name="user" value="@ViewBag.user" />
+
+        <div class="form-group">
+            <div class="jumbotron">
+                <h3>Seleccionar resultado del pago</h3>
+                    <select name="result">
+                        <option selected value="1">Éxito</option>
+                        <option value="0">Error</option>
+                    </select>
+                <hr />
+                <button type="submit" class="btn btn-default">Procesar pago</button>
+            </div>
+        </div>
+    </form>
+</center>

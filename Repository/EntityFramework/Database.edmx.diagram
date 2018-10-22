@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78f9827c4e394bfba59cb09c84129990" Name="Diagrama1">
+        <EntityTypeShape EntityType="FriPriModel.Configuration" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.Dimensions" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.DimensionsCategories" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.DimensionsTypes" Width="1.75" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.EventsLogs" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.Forms" Width="1.5" PointX="6" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.Products" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.ProductsForms" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.Profiles" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.ProfilesDimensions" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.Publishers" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.Subscriptions" Width="1.5" PointX="7.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.Users" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FriPriModel.UsersDimensions" Width="1.5" PointX="10.75" PointY="14.125" IsExpanded="true" />
+        <AssociationConnector Association="FriPriModel.FK_Dimensions_DimensionsCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_Dimensions_DimensionsTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_ProfilesDimensions_Dimensions" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_UsersDimensions_Dimensions" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_DimensionsCategories_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_ProductsForms_Forms" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_Products_Publishers" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_ProductsForms_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_Profiles_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_Users_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_ProfilesDimensions_Profiles" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_Subscriptions_Profiles" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_Subscriptions_Users1" ManuallyRouted="false" />
+        <AssociationConnector Association="FriPriModel.FK_UsersDimensions_Subscriptions" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FriPriModel.Promos" Width="1.5" PointX="3.6097693255216674" PointY="5.4162694837042453" />
+        <EntityTypeShape EntityType="FriPriModel.NaranyaNotification" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="FriPriModel.Unsubscriptions" Width="1.5" PointX="9.75" PointY="18.5" />
+        <AssociationConnector Association="FriPriModel.FK__Unsubscri__IdSub__7B5B524B" />
+        <EntityTypeShape EntityType="FriPriModel.ReserveCode" Width="1.5" PointX="12.5" PointY="17.875" />
+        <EntityTypeShape EntityType="FriPriModel.State" Width="1.5" PointX="10.25" PointY="21.75" />
+        <AssociationConnector Association="FriPriModel.FK_ReserveCode_Product" />
+        <AssociationConnector Association="FriPriModel.FK_ReserveCode_State" />
+        <AssociationConnector Association="FriPriModel.FK_ReserveCode_User" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

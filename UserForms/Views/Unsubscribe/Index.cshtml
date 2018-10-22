@@ -1,0 +1,432 @@
+﻿@{
+    ViewBag.Title = "Desuscribirse";
+}
+@if (String.IsNullOrWhiteSpace(ViewBag.Step))
+{
+    <h2>Desuscribirse</h2>
+    <div class="container jf-form">
+        <form data-licenseKey="" name="jqueryform-f9e548" id="jqueryform-f9e548" action='2' method='post' enctype='multipart/form-data' novalidate autocomplete="on">
+            <input type="hidden" name="method" value="validateForm">
+            <input type="hidden" id="serverValidationFields" name="serverValidationFields" value="">
+
+            <div class="form-group c56 required col-1" data-cid="c56">
+                <label class="control-label" for="c56">Sentimos mucho que estés pensando en dejarnos. ¿Podrías decirnos el motivo? Quizá podamos ayudarte.</label>
+
+                <div class="radio">
+                    <input id="c56_1" name="c56" type="radio" value="Quiero cambiar la forma de pago"
+                            data-rule-required="true">
+                    <label for="c56_1">
+                        Quiero cambiar la forma de pago
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <input id="c56_2" name="c56" type="radio" value="El servicio Premium no incluye todas las características que quiero">
+                    <label for="c56_2">
+                        El servicio Premium no incluye todas las características que quiero
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <input id="c56_3" name="c56" type="radio" value="No encuentro toda mi contenido favorito">
+                    <label for="c56_3">
+                        No encuentro toda mi contenido favorito
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <input id="c56_4" name="c56" type="radio" value="Tengo un problema técnico y necesito ayuda para resolverlo">
+                    <label for="c56_4">
+                        Tengo un problema técnico y necesito ayuda para resolverlo
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <input id="c56_5" name="c56" type="radio" value="Me voy de viaje/me mudo al extranjero">
+                    <label for="c56_5">
+                        Me voy de viaje/me mudo al extranjero
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <input id="c56_6" name="c56" type="radio" value="No necesito tanto contenido como para pagar por Premium">
+                    <label for="c56_6">
+                        No necesito tanto contenido como para pagar por Premium
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <input id="c56_7" name="c56" type="radio" value="Estoy intentando ahorrar dinero">
+                    <label for="c56_7">
+                        Estoy intentando ahorrar dinero
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <input id="c56_8" name="c56" type="radio" value="Prefiero cambiar a Free, las características que ofrece son suficientes para mí">
+                    <label for="c56_8">
+                        Prefiero cambiar a Free, las características que ofrece son suficientes para mí
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <input id="c56_9" name="c56" type="radio" value="Otras razones">
+                    <label for="c56_9">
+                        Otras razones
+                    </label>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="form-group c31  jf-hide" data-cid="c31">
+                <label class="control-label" for="c31">¿Puedes decirnos cuál? (Opcional)</label>
+
+
+                <textarea class="form-control" id="c31" name="c31" rows="3"
+                            data-rule-maxlength="500"></textarea>
+
+
+            </div>
+
+
+
+            <div class="form-group submit c100 " data-cid="c100" style="position: relative;">
+                <label class="control-label sr-only" for="c100" style="display: block;">Submit Button</label>
+
+                <div class="progress" style="display: none; z-index: -1; position: absolute;">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" style="width:100%">
+                    </div>
+                </div>
+
+                <button type="button" id="stay" class="btn btn-primary btn-lg" style="z-index: 1;">
+                    Continuar Suscripción
+                </button>
+
+                <button type="button" id="nextstep" class="btn btn-link btn-lg" style="z-index: 1;" data-toggle="modal" data-target="#premium-features">
+                    Siguiente →
+                </button>
+
+                <p class="error bg-warning" style="display:none;">
+                    Please check the required fields.
+                </p>
+
+            </div>
+            
+        </form>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="premium-features" tabindex="-1" role="dialog" aria-labelledby="premium-featuresLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="premium-featuresLabel">¿Qué recibes con Premium?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-hover table-responsive"><thead><tr><th colspan="1" rowspan="1"></th><th colspan="1" rowspan="1"><p>Premium</p></th><th colspan="1" rowspan="1"><p>Free</p></th></tr></thead><tbody><tr><td colspan="1" rowspan="1">Reproducción aleatoria de cualquier playlist o catálogo de un artista</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr><tr><td colspan="1" rowspan="1">Crea tus propias playlists</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr><tr><td colspan="1" rowspan="1">Reproduce cualquier canción a la carta</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1">*</td></tr><tr><td colspan="1" rowspan="1">Saltos de canciones ilimitados</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1">*</td></tr><tr><td colspan="1" rowspan="1">Máxima calidad de audio</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr><tr><td colspan="1" rowspan="1">Sin interrupciones por anuncios</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr><tr><td colspan="1" rowspan="1">Descarga música y escúchala sin conexión</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr><tr><td colspan="1" rowspan="1">Aplicaciones de terceros</td><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"></td></tr></tbody></table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-primary" onclick='window.location.href = &quot;/&quot;' data-dismiss="modal">Continuar en Premium</button>
+                        <button type="button" class="btn-link" onclick=''>Terminar Suscripción</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+}
+
+@section styles {
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="/content/vendor.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/icheck/1.0.2/skins/flat/_all.min.css" rel="stylesheet">
+    <style type="text/css">
+        /* overwrite bootstrap styles */
+        .jf-form input, jf-form textarea {
+            max-width: 100% !important;
+        }
+
+        .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+            position: relative;
+            margin-top: 0px;
+            margin-left: 2px;
+        }
+
+        .checkbox label, .radio label {
+            padding-left: 4px;
+        }
+
+        .bg-info {
+            background-color: #f6f6f6;
+        }
+
+        .btn-primary {
+            background-image: none;
+            background-color: #424242;
+            border: 0 none;
+        }
+
+            .btn-primary:hover {
+                background-image: none;
+                background-color: #C0C0C0;
+            }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+    <style type="text/css">
+        .select2-hidden-accessible {
+            opacity: 0;
+        }
+    </style>
+    <style type="text/css">
+        .jf-form {
+            margin-top: 28px;
+        }
+
+        .jf-option-box {
+            display: none;
+            margin-left: 8px;
+        }
+
+        .jf-hide {
+            display: none;
+        }
+
+        .jf-disabled {
+            background-color: #eeeeee;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* overwrite bootstrap default margin-left, because the <label> doesn't contain the <input> element. */
+        .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+            position: absolute;
+            margin-top: 4px \9;
+            margin-left: 0px;
+        }
+
+        div.form-group {
+            padding: 8px 8px 4px 8px;
+        }
+
+        .mainDescription {
+            margin-bottom: 10px;
+        }
+
+        .responsive img {
+            width: 100%;
+        }
+
+        p.error, p.validation-error {
+            padding: 5px;
+        }
+
+        p.error {
+            margin-top: 10px;
+            color: #a94442;
+        }
+
+        p.server-error {
+            font-weight: bold;
+        }
+
+        div.thumbnail {
+            position: relative;
+            text-align: center;
+        }
+
+            div.thumbnail.selected p {
+                color: #ffffff;
+            }
+
+            div.thumbnail .glyphicon-ok-circle {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                color: #ffffff;
+                font-size: 32px;
+            }
+
+        .jf-copyright {
+            color: #888888;
+            display: inline-block;
+            margin: 16px;
+            display: none;
+        }
+
+        .form-group.required .control-label:after {
+            color: #dd0000;
+            content: "*";
+            margin-left: 6px;
+        }
+
+        .submit .btn.disabled, .submit .btn[disabled] {
+            background: transparent;
+            opacity: 0.75;
+        }
+
+        /* for image option with span text */
+        .checkbox label > span, .radio label > span {
+            display: block;
+        }
+
+        .form-group.inline .control-label,
+        .form-group.col-1 .control-label,
+        .form-group.col-2 .control-label,
+        .form-group.col-3 .control-label {
+            display: block;
+        }
+
+        .form-group.inline div.radio,
+        .form-group.inline div.checkbox {
+            display: inline-block;
+        }
+
+        .form-group.col-1 div.radio,
+        .form-group.col-1 div.checkbox {
+            display: block;
+        }
+
+        .form-group.col-2 div.radio,
+        .form-group.col-2 div.checkbox {
+            display: inline-block;
+            width: 48%;
+        }
+
+        .form-group.col-3 div.radio,
+        .form-group.col-3 div.checkbox {
+            display: inline-block;
+            width: 30%;
+        }
+    </style>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.es.min.js"></script>
+    <script type="text/javascript">
+	$.fn.datepicker.defaults.language = 'es';
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="/scripts/vendor.js"></script>
+    <script src="/scripts/jqueryform.com.min.js?ver=v1.0-rc21&id=jqueryform-c4e2d0"></script>
+    <!-- [ Start: iCheck support ] ---------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/icheck/1.0.2/icheck.min.js"></script>
+    <script type="text/javascript">
+        $("#stay").click(function () {
+            window.location.href = "/";
+        });
+      $('.jf-form input').iCheck({
+	        checkboxClass: 'icheckbox_flat',
+	        radioClass: 'iradio_flat'
+      }).on('ifClicked', function(e){
+        setTimeout( function(){
+          $(e.target).valid();
+          $(e.target).trigger('change').trigger('handleOptionBox');
+        }, 250);
+      });
+    </script>
+    <!-- [ End: iCheck support ] ---------------------------------- -->
+    <!-- [ Start: Select2 support ] ---------------------------------- -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.full.min.js"></script>
+    <script type="text/javascript">
+(function(){
+
+	function templateResult (obj) {
+	  if (!obj.id) { return obj.text; }
+
+	  var img = $(obj.element).data('imgSrc');
+	  if( img ){
+	    return $( '<span><img src="' + img + '" class="img-flag" /> ' + obj.text + '</span>' );
+	  };
+
+	  return obj.text;
+	};
+
+	$(".jf-form select").css('width', '100%'); // make it responsive
+	$(".jf-form select").select2({
+	  templateResult: templateResult
+	}).change( function(e){
+	  $(e.target).valid();
+	});
+
+})();
+    </script>
+    <!-- [ End: Select2 support ] ---------------------------------- -->
+<script type="text/javascript">
+
+	// start jqueryform initialization
+	// --------------------------------
+	JF.init('#jqueryform-f9e548');
+
+	// watch form element change event to run jqueryform's formlogic
+	// ---------------------------------------------------------------
+	var logics = [
+    {
+        "disabled": false,
+        "action": "enable",
+        "selector": "c31",
+        "match": "all",
+        "rules": [
+            {
+                "disabled": false,
+                "selector": "c56",
+                "condition": "==",
+                "value": "Otras razones"
+            }
+        ]
+    },
+    {
+        "disabled": false,
+        "action": "disable",
+        "selector": "c31",
+        "match": "all",
+        "rules": [
+            {
+                "disabled": false,
+                "selector": "c56",
+                "condition": "!=",
+                "value": "Otras razones"
+            }
+        ]
+    },
+    {
+        "disabled": false,
+        "action": "show",
+        "selector": "c31",
+        "match": "all",
+        "rules": [
+            {
+                "disabled": false,
+                "selector": "c56",
+                "condition": "==",
+                "value": "Otras razones"
+            }
+        ]
+    },
+    {
+        "disabled": false,
+        "action": "hide",
+        "selector": "c31",
+        "match": "all",
+        "rules": [
+            {
+                "disabled": false,
+                "selector": "c56",
+                "condition": "!=",
+                "value": "Otras razones"
+            }
+        ]
+    }
+];
+	$('input,input:radio,select').change(function(){
+		$.formlogic( {logics: logics} );
+	});
+</script>
+}
+
